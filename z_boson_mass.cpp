@@ -32,10 +32,6 @@
     float_t l2_E, l2_pt, l2_phi, l2_eta;
     float_t ll_m, llg_m;
     float_t inv_z_massll, inv_mass_ll_TLV, inv_mass_llg_TLV;
-    /*float_t Ph_E, Ph_pt, Ph_phi, Ph_eta;
-    float_t L1_E, L1_pt, L1_phi, L1_eta;
-    float_t L2_E, L2_pt, L2_phi, L2_eta;
-    float_t Ll_m, Llg_m, Inv_z_massll, Inv_mass_ll_TLV, Inv_mass_llg_TLV; */
 
     tree->SetBranchAddress("ph.E",&ph_E);
     tree->SetBranchAddress("ph.pt",&ph_pt);
@@ -86,7 +82,7 @@
     m_tree->Branch("inv_mass_ll_TLV",&inv_mass_ll_TLV,"inv_mass_ll_TLV/F");
     m_tree->Branch("inv_mass_llg_TLV",&inv_mass_llg_TLV,"inv_mass_llg_TLV/F");
 
-    int Num = (int)tree->GetEntries();                                           
+    int Num = (int)tree->GetEntries();
 
     for (int i = 0; i < Num; i++){
       tree->GetEntry(i);
@@ -145,7 +141,6 @@
       hist4->Draw("same");
       c2->Write();
       c2->Print("z_boson");
-
 
 
       TLegend *leg2 = new TLegend(0.6, 0.7, 0.9, 0.9);
