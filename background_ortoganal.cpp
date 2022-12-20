@@ -105,6 +105,7 @@ void background_ortoganal(){
     if (ortoganal_select_eg==0) hist_FR_egamma_4->Fill(metTSTsignif_eg, weight_eg);
     if (ortoganal_select_eg==0) hist_FR_egamma_5->Fill(metTSTsignif_eg, weight_eg);
   }
+
   Double_t overflow_FR_eg_1 = hist_FR_egamma_1->GetBinContent(nbins)+hist_FR_egamma_1->GetBinContent(nbins+1);
   Double_t overflow_FR_eg_2 = hist_FR_egamma_2->GetBinContent(nbins)+hist_FR_egamma_2->GetBinContent(nbins+1);
   Double_t overflow_FR_eg_3 = hist_FR_egamma_3->GetBinContent(nbins)+hist_FR_egamma_3->GetBinContent(nbins+1);
@@ -123,23 +124,23 @@ void background_ortoganal(){
   Double_t overflow_CR2_eg_4 = hist_CR2_egamma_4->GetBinContent(nbins)+hist_CR2_egamma_4->GetBinContent(nbins+1);
   Double_t overflow_CR2_eg_5 = hist_CR2_egamma_5->GetBinContent(nbins)+hist_CR2_egamma_5->GetBinContent(nbins+1);
 
-  hist_FR_egamma_1->SetBinContent(nbins, overflow_FR_eg_1);
-  hist_FR_egamma_2->SetBinContent(nbins, overflow_FR_eg_2);
-  hist_FR_egamma_3->SetBinContent(nbins, overflow_FR_eg_3);
-  hist_FR_egamma_4->SetBinContent(nbins, overflow_FR_eg_4);
-  hist_FR_egamma_5->SetBinContent(nbins, overflow_FR_eg_5);
+  hist_FR_egamma_1->SetBinContent(nbins, 0);
+  hist_FR_egamma_2->SetBinContent(nbins, 0);
+  hist_FR_egamma_3->SetBinContent(nbins, 0);
+  hist_FR_egamma_4->SetBinContent(nbins, 0);
+  hist_FR_egamma_5->SetBinContent(nbins, 0);
 
-  hist_CR1_egamma_1->SetBinContent(nbins, overflow_CR1_eg_1);
-  hist_CR1_egamma_2->SetBinContent(nbins, overflow_CR1_eg_2);
-  hist_CR1_egamma_3->SetBinContent(nbins, overflow_CR1_eg_3);
-  hist_CR1_egamma_4->SetBinContent(nbins, overflow_CR1_eg_4);
-  hist_CR1_egamma_5->SetBinContent(nbins, overflow_CR1_eg_5);
+  hist_CR1_egamma_1->SetBinContent(nbins, 0);
+  hist_CR1_egamma_2->SetBinContent(nbins, 0);
+  hist_CR1_egamma_3->SetBinContent(nbins, 0);
+  hist_CR1_egamma_4->SetBinContent(nbins, 0);
+  hist_CR1_egamma_5->SetBinContent(nbins, 0);
 
-  hist_CR2_egamma_1->SetBinContent(nbins, overflow_CR2_eg_1);
-  hist_CR2_egamma_2->SetBinContent(nbins, overflow_CR2_eg_2);
-  hist_CR2_egamma_3->SetBinContent(nbins, overflow_CR2_eg_3);
-  hist_CR2_egamma_4->SetBinContent(nbins, overflow_CR2_eg_4);
-  hist_CR2_egamma_5->SetBinContent(nbins, overflow_CR2_eg_5);
+  hist_CR2_egamma_1->SetBinContent(nbins, 0);
+  hist_CR2_egamma_2->SetBinContent(nbins, 0);
+  hist_CR2_egamma_3->SetBinContent(nbins, 0);
+  hist_CR2_egamma_4->SetBinContent(nbins, 0);
+  hist_CR2_egamma_5->SetBinContent(nbins, 0);
 
   Double_t overflow_err_FR_eg_1 = sqrt(pow(hist_FR_egamma_1->GetBinError(nbins), 2) + pow(hist_FR_egamma_1->GetBinError(nbins+1), 2));
   Double_t overflow_err_FR_eg_2 = sqrt(pow(hist_FR_egamma_2->GetBinError(nbins), 2) + pow(hist_FR_egamma_2->GetBinError(nbins+1), 2));
@@ -159,23 +160,23 @@ void background_ortoganal(){
   Double_t overflow_err_CR2_eg_4 = sqrt(pow(hist_CR2_egamma_4->GetBinError(nbins), 2) + pow(hist_CR2_egamma_4->GetBinError(nbins+1), 2));
   Double_t overflow_err_CR2_eg_5 = sqrt(pow(hist_CR2_egamma_5->GetBinError(nbins), 2) + pow(hist_CR2_egamma_5->GetBinError(nbins+1), 2));
 
-  hist_FR_egamma_1->SetBinError(nbins, overflow_err_FR_eg_1);
-  hist_FR_egamma_2->SetBinError(nbins, overflow_err_FR_eg_2);
-  hist_FR_egamma_3->SetBinError(nbins, overflow_err_FR_eg_3);
-  hist_FR_egamma_4->SetBinError(nbins, overflow_err_FR_eg_4);
-  hist_FR_egamma_5->SetBinError(nbins, overflow_err_FR_eg_5);
+  hist_FR_egamma_1->SetBinError(nbins, 0);
+  hist_FR_egamma_2->SetBinError(nbins, 0);
+  hist_FR_egamma_3->SetBinError(nbins, 0);
+  hist_FR_egamma_4->SetBinError(nbins, 0);
+  hist_FR_egamma_5->SetBinError(nbins, 0);
 
-  hist_CR1_egamma_1->SetBinError(nbins, overflow_err_CR1_eg_1);
-  hist_CR1_egamma_2->SetBinError(nbins, overflow_err_CR1_eg_2);
-  hist_CR1_egamma_3->SetBinError(nbins, overflow_err_CR1_eg_3);
-  hist_CR1_egamma_4->SetBinError(nbins, overflow_err_CR1_eg_4);
-  hist_CR1_egamma_5->SetBinError(nbins, overflow_err_CR1_eg_5);
+  hist_CR1_egamma_1->SetBinError(nbins, 0);
+  hist_CR1_egamma_2->SetBinError(nbins, 0);
+  hist_CR1_egamma_3->SetBinError(nbins, 0);
+  hist_CR1_egamma_4->SetBinError(nbins, 0);
+  hist_CR1_egamma_5->SetBinError(nbins, 0);
 
-  hist_CR2_egamma_1->SetBinError(nbins, overflow_err_CR2_eg_1);
-  hist_CR2_egamma_2->SetBinError(nbins, overflow_err_CR2_eg_2);
-  hist_CR2_egamma_3->SetBinError(nbins, overflow_err_CR2_eg_3);
-  hist_CR2_egamma_4->SetBinError(nbins, overflow_err_CR2_eg_4);
-  hist_CR2_egamma_5->SetBinError(nbins, overflow_err_CR2_eg_5);
+  hist_CR2_egamma_1->SetBinError(nbins, 0);
+  hist_CR2_egamma_2->SetBinError(nbins, 0);
+  hist_CR2_egamma_3->SetBinError(nbins, 0);
+  hist_CR2_egamma_4->SetBinError(nbins, 0);
+  hist_CR2_egamma_5->SetBinError(nbins, 0);
 
   hist_CR1_egamma_1->Scale(11.09/hist_CR1_egamma_1->Integral());
   hist_CR1_egamma_2->Scale(2.309/hist_CR1_egamma_2->Integral());
