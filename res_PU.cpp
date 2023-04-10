@@ -30,13 +30,19 @@ SetAtlasStyle();
 
   TCanvas *c1=new TCanvas();
   c1->SetLogy(1);
+  c1->cd();
   // gStyle->SetErrorX(0);
   hist_data_full->SetMarkerStyle(8);
   hist_data_full->SetMarkerSize(2);
-  hist_data_full->Draw("HISTsame");
+  hist_data_full->SetMarkerColor(kBlack);
+  hist_data_full->SetLineWidth(2);
+
   hist_sig_full->SetLineStyle(1);
   hist_sig_full->SetLineColor(kViolet+8);
   hist_sig_full->SetLineWidth(1);
+  hist_sig_full->SetMarkerSize(0);
+
+  hist_data_full->Draw("");
   hist_sig_full->Draw("HISTsame");
 
   TLine *l_1 = new TLine(-50,0,-50,2100);
